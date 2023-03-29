@@ -1,0 +1,78 @@
+/*default css*/
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.line-clamp-4 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+/*default css*/
+.slick-dots li{
+    margin:0;
+}
+.feature-s3-inner >div{
+    padding: 0;
+}
+.feature-s3-inner .slick-list{
+    margin-bottom: 30px;
+}
+.testimonial-s1 .slick-list{
+    padding-bottom: 30px;
+}
+.blog-area-s2 .icon, .b-post-s1 .icon{
+    margin-right: 10px;
+}
+.b-post-s1 .title{
+    text-transform: capitalize;
+}
+.s-project-s1{
+    overflow: hidden;
+}
+.s-project-s1 .content {
+    transform: translateY(110%);
+
+}
+.project-slider-area-s1 .slick-list{
+    padding-bottom: 30px;
+}
+.team-area-s1 .slick-list{
+    padding-bottom: 50px;
+}
+.project-slider-area-s6 .slick-list{
+    margin-bottom: 25px;
+}
+.home6-team-s.team-area-s2 .slick-list{
+    padding-bottom: 40px;
+}
+.s-padding-b{
+    padding-top: 0;
+}
+.s-accordion__b {
+    height: auto;
+    padding: 0 25px 17px 25px;
+}
+.accordion-s1 .s-accordion.active {
+    padding-bottom: 0;
+}
+/*@media only screen and (max-width: 1200px) {*/
+/*    .mobile-header {*/
+/*        display: block;*/
+/*    }*/
+/*}*/
