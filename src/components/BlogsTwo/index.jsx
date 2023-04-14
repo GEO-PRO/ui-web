@@ -3,15 +3,19 @@ import Footer from "../HomeOne/Footer";
 import TitleSection from "../common/TitleSection";
 import MainSection from "./MainSection";
 import InnerPageWrapper from "../common/InnerPageWrapper";
+import Header from '../HomeOne/Header';
+import Drawer from '../Mobile/Drawer';
 
 function Index() {
     return (
         <>
-           <InnerPageWrapper>
-               <TitleSection title="Blogs Two" paths={[{name:'blogs',path:'/blogs-two'},{name:'blogs',path:'/blogs-two'}]}/>
-               <MainSection/>
-               <Footer/>
-           </InnerPageWrapper>
+            {/* <InnerPageWrapper> */}
+                <Header />
+                <Drawer />
+                <TitleSection title="Tin tức" paths={[{ name: 'Địa lý quanh ta', path: '/blogs-two' }]} />
+                <MainSection />
+                <Footer />
+            {/* </InnerPageWrapper> */}
         </>
     );
 }

@@ -1,10 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import HomeOne from "./components/HomeOne/index";
-import HomeTwo from "./components/HomeTwo";
-import HomeThree from "./components/HomeThree";
-import HomeFour from "./components/HomeFour";
-import HomeFive from "./components/HomeFive";
-import HomeSix from "./components/HomeSix";
 import About from "./components/About";
 import Service from "./components/Service";
 import TeamsPage from "./components/TeamsPage";
@@ -23,11 +18,6 @@ function Routers() {
   return (
     <Routes>
       <Route exact path="/" element={<HomeOne />} />
-      <Route exact path="/home-two" element={<HomeTwo />} />
-      <Route exact path="/home-three" element={<HomeThree />} />
-      <Route exact path="/home-four" element={<HomeFour />} />
-      <Route exact path="/home-five" element={<HomeFive />} />
-      <Route exact path="/home-six" element={<HomeSix />} />
       <Route exact path="/about" element={<About />} />
       <Route exact path="/service" element={<Service />} />
       <Route exact path="/teams" element={<TeamsPage />} />

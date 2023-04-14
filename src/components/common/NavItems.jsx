@@ -1,60 +1,26 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function NavItems() {
     return (
         <nav className="m-nav">
             <ul>
                 <li className="dropdown">
-                    <Link  to="#nolink"
-                    >Home <i className="fa-solid fa-chevron-down"></i
-                    ></Link>
-                    <ul className="d-menu">
-                        <li>
-                            <Link to="/" >
-                                Home 1
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/home-two" >
-                                Home 2
-                            </Link>
-                        </li>
-                        <li>
-                             <Link to="/home-three" >
-                                 Home 3
-                            </Link>
-                            </li>
-                        <li>
-                             <Link to="/home-four" >
-                                 Home 4
-                            </Link>
-                            </li>
-                        <li>
-                             <Link to="/home-five" >
-                                 Home 5
-                            </Link>
-                            </li>
-                        <li>
-                             <Link to="/home-six" >
-                                 Home 6
-                            </Link>
-                        </li>
-
-                    </ul>
+                    <Link to="/"
+                    >Trang chủ</Link>
                 </li>
                 <li>
-                    <Link to="/about" >
-                        About
+                    <Link to="/blogs-two" >
+                        Tin tức
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link to="/service" >
                         Services
                     </Link>
                 </li>
                 <li className="dropdown">
-                    <Link  to="#nolink"
+                    <Link to="#nolink"
                     >Pages <i className="fa-solid fa-chevron-down"></i
                     ></Link>
                     <ul className="d-menu">
@@ -96,7 +62,7 @@ function NavItems() {
                     </Link>
                 </li>
                 <li className="dropdown">
-                    <Link  to="#nolink"
+                    <Link to="#nolink"
                     >Blog <i className="fa-solid fa-chevron-down"></i
                     ></Link>
                     <ul className="d-menu">
@@ -121,7 +87,7 @@ function NavItems() {
                     <Link to="/contact" >
                         Contact
                     </Link>
-                </li>
+                </li> */}
             </ul>
         </nav>
     );
