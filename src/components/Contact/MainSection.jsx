@@ -5,7 +5,7 @@ function MainSection() {
     return (
         <section className="contact-form-area s-padding">
             <div className="container">
-                <div className="row">
+                <div className="row justify-content-md-center">
                     <div className="col-lg-5">
                         <div className="contact-info">
                             <span className="s-sub-title">Contact With Us</span>

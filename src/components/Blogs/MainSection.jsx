@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import {Link} from "react-router-dom";
-import BlogCardStyleOne from "../common/BlogCardStyleOne";
+import React, { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 import blogsData from "../../data/Blogs.json";
+import BlogCardStyleOne from "../BlogsTwo/BlogCardStyleOne";
 
 function MainSection() {
     const [blogs, setBlogs] = useState([]);
@@ -12,9 +12,9 @@ function MainSection() {
         <section className="b-post-gallery-s1 s-padding">
             <div className="container">
                 <div className="row">
-                    {blogs && blogs.length>0 && blogs.map((item)=>(
+                    {blogs && blogs.length > 0 && blogs.map((item) => (
                         <div key={item.id} className="col-lg-4 col-md-6">
-                            <BlogCardStyleOne datas={item}/>
+                            <BlogCardStyleOne datas={item} />
                         </div>
                     ))}
                 </div>

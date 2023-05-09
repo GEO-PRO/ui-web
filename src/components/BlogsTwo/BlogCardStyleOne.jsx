@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { BASE_URL } from '../../service/config';
-import { convertStrArr } from '../BlogsTwo/blogsService';
+import { BASE_URL, convertStrArr } from '../../service/config';
 
 function BlogCardStyleOne({ datas, className }) {
     // console.log('object :>> ', convertStrArr(datas.files_name));
@@ -24,12 +23,12 @@ function BlogCardStyleOne({ datas, className }) {
                     </li>
                 </ul>
                 <h4 className="title line-clamp-2 c-text-overflow">
-                    <Link to="/blog-details">{datas.title}</Link>
+                    <Link to={`/news-details/${datas.id}`}>{datas.title}</Link>
                 </h4>
                 <span className="text c-text-overflow">{datas.summary}</span>
                 <div className="btm">
-                    <Link className="readmore" to="/blog-details"
-                    >Learn More <i className="fa-solid fa-arrow-right"></i
+                    <Link className="readmore" to={`/news-details/${datas.id}`}
+                    >Xem chi tiết <i className="fa-solid fa-arrow-right"></i
                     ></Link>
                 </div>
             </div>

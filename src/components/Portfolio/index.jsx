@@ -7,7 +7,7 @@ import InnerPageWrapper from "../common/InnerPageWrapper";
 function Index() {
     return (
        <InnerPageWrapper>
-           <TitleSection title="Portfolio" paths={[{name:'home',path:'/'},{name:'portfolio',path:'/portfolio'}]}/>
+           <TitleSection title="Portfolio" paths={[{name:'home',path:'/'},{name:'portfolio',path:'/docs-title/1'}]}/>
            <MainSection/>
            <Footer/>
        </InnerPageWrapper>

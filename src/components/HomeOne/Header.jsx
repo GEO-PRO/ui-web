@@ -19,7 +19,7 @@ function Header() {
                                 <NavItems />
                             </div>
                             <div className="p-right">
-                                <a href="/service" className="btn btn-s3">Start a Project</a>
+                                <a href="/service" className="btn btn-s3">Đăng nhập</a>
                             </div>
                         </div>
                     </div>

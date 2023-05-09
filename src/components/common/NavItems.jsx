@@ -9,11 +9,17 @@ function NavItems() {
                     <Link to="/"
                     >Trang chủ</Link>
                 </li>
+                <li className="dropdown">
+                    <Link to="/library" >
+                        Thư viện
+                    </Link>
+                </li>
                 <li>
-                    <Link to="/blogs-two" >
+                    <Link to="/news" >
                         Tin tức
                     </Link>
                 </li>
+
                 {/* <li>
                     <Link to="/service" >
                         Services

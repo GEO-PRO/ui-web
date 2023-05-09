@@ -11,6 +11,7 @@ import TestimonialSection from "./TestimonialSection";
 import BlogSection from "./BlogSection";
 import Footer from "./Footer";
 import Drawer from "../Mobile/Drawer";
+import { Helmet } from "react-helmet";
 
 function index() {
   useEffect(() => {
@@ -20,6 +21,9 @@ function index() {
 
   return (
     <>
+      <Helmet>
+        <title>Kiến thức Địa lý</title>
+      </Helmet>
       <Header />
       <Drawer />
       <Hero />

@@ -1,10 +1,13 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from "react-router-dom";
 import SliderCom from "../helpers/SliderCom";
+import axios from 'axios';
+import { API_URL, BASE_URL, convertStrArr, convertTime, scrollTop } from '../../service/config';
+import { Helmet } from 'react-helmet';
 
 
 function MainSection() {
-    const settings={
+    const settings = {
         dots: true,
         infinite: true,
         autoplay: true,
@@ -40,15 +43,50 @@ function MainSection() {
             }
         ]
     };
+    const { id } = useParams()
+    const [detailBlog, setDetailBlog] = useState([])
+
+    const renderThumb = () => {
+        const thumbFile = convertStrArr(detailBlog.files_name)
+        return (thumbFile.length > 2) ? (thumbFile.map(file => {
+            return <div className="item">
+                <img
+                    src={`${BASE_URL}/images/${file}`}
+                    alt=""
+                />
+            </div>
+        })) : <></>
+
+    }
+
+    const renderTag = () => {
+        const tag = convertStrArr(detailBlog.tag_name)
+        return tag.map(item => {
+            return <li><Link to="#">#{item}</Link></li>
+        })
+    }
+
+    useEffect(() => {
+        axios.get(`${API_URL}/blogs/${id}`).then((result) => {
+            setDetailBlog(result.data[0]);
+            scrollTop()
+        }).catch((err) => {
+            console.log('err :>> ', err);
+        });
+    }, [])
+
     return (
-        <section className="single-blog-detail s-padding">
+        <section className="single-blog-detail">
+            <Helmet>
+                <title>{detailBlog.title}</title>
+            </Helmet>
             <div className="container">
                 <div className="row">
                     <main className="col-lg-8">
                         <div className="single-blog-content">
                             <div className="feature-img">
 
-                                <img src={require(`../../assets/images/thumbs/single-blog-img.png`)} alt=""/>
+                                <img src={`${BASE_URL}/images/${convertStrArr(detailBlog.files_name)[0]}`} alt="" />
                             </div>
                             <ul className="blog-meta">
                                 <li>
@@ -60,170 +98,35 @@ function MainSection() {
                                     <Link to="#"
                                     ><span className="icon"
                                     ><i className="fa-solid fa-calendar-days"></i></span
-                                    ><span className="text">31 May 2022</span></Link>
+                                        ><span className="text">{convertTime(detailBlog.created_at)}</span></Link>
                                 </li>
                                 <li>
                                     <Link to="#"
                                     ><span className="icon"
                                     ><i className="fa-solid fa-comment"></i></span
-                                    ><span className="text">20 Comment</span></Link>
-                                </li>
-                            </ul>
-                            <h1 className="post-title">
-                                Ai robot using cyber security to protect information privacy
-                            </h1>
-                            <p className="desc">
-                                There are many variations of passages of Lorem Ipsum available,
-                                but the majority have suf ered alteration in some form, by
-                                injected humour, or randomised words which dont look as even
-                                slightly believable. If you are going to use a passage of Lorem
-                                Ipsum, you need to be sure there isnt anything embarrassing
-                                hidden in the middle of text.
-                            </p>
-                            <p className="desc">
-                                Erators on the Internet tend to repeat predefined chunks as
-                                necessary, making this the first true generator on the Internet.
-                                It uses a dictionary of over 200 Latin words, combined with a
-                                handful of model sentence structures
-                            </p>
-                            <div className="author-card">
-                                <div className="thumb">
-                                    <img src={require(`../../assets/images/thumbs/post-author.png`)} alt=""/>
-                                </div>
-                                <div className="content">
-                                    <p>
-                                        We can easily manage if we will only take, each days, the as
-                                        burden to it. But the load will be too heavy for us if we
-                                        carry yesterday’s burden a our over again today.
-                                    </p>
-                                    <div className="a-name-desig-wrap">
-                                        <h5 className="a-name">Deniella Rhodes</h5>
-                                        <p className="a-desig">CEO of Antech</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="post-gallery">
-                                <div className="image-slider-s1">
-                                    <SliderCom settings={settings}>
-                                        <div className="item">
-                                            <img
-                                                src={require(`../../assets/images/thumbs/post-gallery-img1.png`)}
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="item">
-                                            <img
-                                                src={require(`../../assets/images/thumbs/post-gallery-img2.png`)}
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="item">
-                                            <img
-                                                src={require(`../../assets/images/thumbs/post-gallery-img1.png`)}
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="item">
-                                            <img
-                                                src={require(`../../assets/images/thumbs/post-gallery-img2.png`)}
-                                                alt=""
-                                            />
-                                        </div>
-                                    </SliderCom>
-                                </div>
-                            </div>
-                            <h2 className="title-2">Digital technology on the cutting edge</h2>
-                            <div className="desc">
-                                Sure there isnt anything embarrassing hidden in the middle of
-                                text. All the Lorem Ipsum gen erators on the Internet tend to
-                                repeat predefined chunks as necessary, making this the first
-                                true generator on the Internet. It uses a dictionary of over 200
-                                Latin words, combined with a handful of model sentence
-                                structures
-                            </div>
-                            <ul className="i-list">
-                                <li>
-                                    <span className="icon"><i className="fa-solid fa-check"></i></span>
-                                    <span className="text"
-                                    >It is a long established fact that a reader will be</span
-                                    >
-                                </li>
-                                <li>
-                                    <span className="icon"><i className="fa-solid fa-check"></i></span>
-                                    <span className="text"
-                                    >There are many variations of passages</span
-                                    >
-                                </li>
-                                <li>
-                                    <span className="icon"><i className="fa-solid fa-check"></i></span>
-                                    <span className="text">All the Lorem Ipsum generators</span>
-                                </li>
-                                <li>
-                                    <span className="icon"><i className="fa-solid fa-check"></i></span>
-                                    <span className="text"
-                                    >Asearch for lorem ipsum will uncover many</span
-                                    >
+                                        ><span className="text">20 Comment</span></Link>
                                 </li>
                             </ul>
                             <div className="s-post-tag-share-wrap">
                                 <div className="p-tags">
-                                    <h3 className="title">Tag:</h3>
+                                    <h3 className="title">Chủ đề:</h3>
                                     <ul className="tags">
-                                        <li><Link to="#">#Technology</Link></li>
-                                        <li><Link to="#">#Agency</Link></li>
-                                        <li><Link to="#">#Data</Link></li>
-                                    </ul>
-                                </div>
-                                <div className="p-share">
-                                    <h3 className="title">Share:</h3>
-                                    <ul className="social-icons-s1">
-                                        <li>
-                                            <Link to="https://www.facebook.com/QuomodoSoft"
-                                            ><i className="fa-brands fa-facebook-f"></i
-                                            ></Link>
-                                        </li>
-                                        <li>
-                                            <Link to="https://www.facebook.com/QuomodoSoft"
-                                            ><i className="fa-brands fa-twitter"></i
-                                            ></Link>
-                                        </li>
-                                        <li>
-                                            <Link to="https://www.facebook.com/QuomodoSoft"
-                                            ><i className="fa-brands fa-linkedin-in"></i
-                                            ></Link>
-                                        </li>
-                                        <li>
-                                            <Link to="https://www.facebook.com/QuomodoSoft"
-                                            ><i className="fa-brands fa-youtube"></i
-                                            ></Link>
-                                        </li>
+                                        {renderTag()}
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                        <div className="more-post-section">
-                            <div className="post prev">
-                                <div className="thumb">
-                                    <img
-                                        src={require(`../../assets/images/blog-post/more-post-thumb-1.png`)}
-                                        alt=""
-                                    />
-                                </div>
-                                <div className="content">
-                                    <p>Cupidatat non proident sunt culpa officia</p>
-                                    <Link to="#"><i className="fa-solid fa-arrow-left"></i>Previous</Link>
-                                </div>
-                            </div>
-                            <div className="post next">
-                                <div className="thumb">
-                                    <img
-                                        src={require(`../../assets/images/blog-post/more-post-thumb-2.png`)}
-                                        alt=""
-                                    />
-                                </div>
-                                <div className="content">
-                                    <p>The start-up ultimate uuide to make your wordpress</p>
-                                    <Link to="#">Next<i className="fa-solid fa-arrow-right"></i></Link>
+                            <h1 className="post-title">
+                                {detailBlog.title}
+                            </h1>
+                            <p className="desc">
+                                {React.createElement("div", { dangerouslySetInnerHTML: { __html: detailBlog.content } })}
+                            </p>
+
+                            <div className="post-gallery">
+                                <div className="image-slider-s1">
+                                    <SliderCom settings={settings}>
+                                        {renderThumb()}
+                                    </SliderCom>
                                 </div>
                             </div>
                         </div>
@@ -335,7 +238,7 @@ function MainSection() {
                         <div className="blog-sidebar-s1">
                             <div className="featured-author-widget widget">
                                 <div className="thumb">
-                                    <img src={require(`../../assets/images/thumbs/blog-author.png`)} alt=""/>
+                                    <img src={require(`../../assets/images/thumbs/blog-author.png`)} alt="" />
                                 </div>
                                 <div className="content">
                                     <h3 className="name">Amada Smith</h3>
@@ -367,15 +270,6 @@ function MainSection() {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="search-widget widget">
-                                <h3 className="w-title">Search</h3>
-                                <div className="search-container">
-                                    <input type="text" placeholder="Search"/>
-                                    <button type="submit">
-                                        <i className="fa-solid fa-magnifying-glass"></i>
-                                    </button>
-                                </div>
-                            </div>
                             <div className="latest-posts-widget widget">
                                 <h3 className="w-title">Latest Post</h3>
                                 <div className="recent-posts">
@@ -392,7 +286,7 @@ function MainSection() {
                                             </h4>
                                             <span
                                             ><i className="fa-solid fa-calendar-days"></i>23 May
-                        2022</span
+                                                2022</span
                                             >
                                         </div>
                                     </div>
@@ -409,7 +303,7 @@ function MainSection() {
                                             </h4>
                                             <span
                                             ><i className="fa-solid fa-calendar-days"></i>23 May
-                        2022</span
+                                                2022</span
                                             >
                                         </div>
                                     </div>
@@ -426,78 +320,11 @@ function MainSection() {
                                             </h4>
                                             <span
                                             ><i className="fa-solid fa-calendar-days"></i>23 May
-                        2022</span
+                                                2022</span
                                             >
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="blog-catagories-widget widget">
-                                <h3 className="w-title">Categories</h3>
-                                <ul className="catagory-list">
-                                    <li>
-                                        <Link to="#"
-                                        ><span className="name">Development</span
-                                        ><span className="count">(6)</span></Link>
-                                    </li>
-                                    <li>
-                                        <Link to="#"
-                                        ><span className="name">Guide</span
-                                        ><span className="count">(9)</span></Link>
-                                    </li>
-                                    <li>
-                                        <Link to="#"
-                                        ><span className="name">Inspiration</span
-                                        ><span className="count">(4)</span></Link>
-                                    </li>
-                                    <li>
-                                        <Link to="#"
-                                        ><span className="name">Latest News</span
-                                        ><span className="count">(7)</span></Link>
-                                    </li>
-                                    <li>
-                                        <Link to="#"
-                                        ><span className="name">Revenue</span
-                                        ><span className="count">(3)</span></Link>
-                                    </li>
-                                    <li>
-                                        <Link to="#"
-                                        ><span className="name">Start Up</span
-                                        ><span className="count">(2)</span></Link>
-                                    </li>
-                                    <li>
-                                        <Link to="#"
-                                        ><span className="name">Technology</span
-                                        ><span className="count">(5)</span></Link>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="popular-tags-widget widget">
-                                <h3 className="w-title">Popular Tags</h3>
-                                <div className="tags-container">
-                                    <Link to="#" className="tag">Agency</Link>
-                                    <Link to="#" className="tag">Creative</Link>
-                                    <Link to="#" className="tag">Data</Link>
-                                    <Link to="#" className="tag">Technology</Link>
-                                    <Link to="#" className="tag">Development</Link>
-                                    <Link to="#" className="tag">Business</Link>
-                                    <Link to="#" className="tag">Idea</Link>
-                                    <Link to="#" className="tag">Generic</Link>
-                                </div>
-                            </div>
-                            <div className="subs-newsletter-widget widget">
-                                <h3 className="w-title">Our Newsletter</h3>
-                                <p>Follow our newsletter to stay updated about us.</p>
-                                <form action="#">
-                                    <div className="form-container">
-                                        <input
-                                            type="text"
-                                            name="email"
-                                            placeholder="Enter Your Email Address"
-                                        />
-                                        <button type="submit">Subscribe</button>
-                                    </div>
-                                </form>
                             </div>
                         </div>
                     </aside>
