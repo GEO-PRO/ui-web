@@ -23,14 +23,9 @@ function Index() {
             </Helmet>
             <Header />
             <Drawer />
-            <TitleSection title="Thư viện" paths={[{ name: 'Tài liệu và đề thi chất lượng', path: '/blogs-two' }]} />
+            <TitleSection title="Thư viện" paths={[{ name: 'Tài liệu và đề thi chất lượng', path: '/library' }]} />
             <FeatureSectionTwo />
-            {/* <PricingSection />
-            <ContactSection />
-            <History />
-            <Sponser className="sponsers-slider-s2 s-padding-b" /> */}
             <Footer />
-            {/* </InnerPageWrapper> */}
         </>
     );
 }

@@ -30,7 +30,7 @@ function Index() {
             {/* <InnerPageWrapper> */}
             <Header />
             <Drawer />
-            <TitleSection title="Thư viện" paths={[{ name: `Tài Liệu Và Đề Thi Chất Lượng | ${titleName}`, path: '/blogs-two' }]} />
+            <TitleSection title="Thư viện" paths={[{ name: `Tài Liệu Và Đề Thi Chất Lượng | ${titleName.split(". ")[1]}`, path: '/library' }]} />
             <MainSection />
             <Footer />
             {/* </InnerPageWrapper> */}

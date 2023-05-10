@@ -18,12 +18,12 @@ function MainSection() {
 
     const renderGoNextPage = () => {
         return currentPage == 1 ? <></> :
-            (<li><Link onClick={() => { setCurrentPage(currentPage - 1) }} to="#"><i className="fa fa-angle-double-left"></i></Link></li>)
+            (<li><Link onClick={() => { setCurrentPage(currentPage - 1) }} to="#"><img src={require(`../../assets/images/icons/arrow-left.svg`).default} alt="arrow" /></Link></li>)
     }
 
     const renderPreviousPage = () => {
         return (currentPage == totalPages || totalPages == 0) ? <></> :
-            (<li><Link onClick={() => { setCurrentPage(currentPage + 1) }} to="#"><i className="fa fa-angle-double-right"></i></Link></li>)
+            (<li><Link onClick={() => { setCurrentPage(currentPage + 1) }} to="#"><img src={require(`../../assets/images/icons/arrow-right.svg`).default} alt="arrow" /></Link></li>)
     }
 
     const renderFilterButton = () => {
@@ -95,16 +95,6 @@ function MainSection() {
         <section className="blog-main s-padding">
             <div className="container">
                 <div className="row">
-                    <main className="col-lg-8">
-                        <div className="row b-post-gallery-s2" style={{ "justify-content": "center" }}>
-                            {notFound ? <NotFound /> : <></>}
-                            {blogs && blogs.length > 0 && blogs.map((item) => (
-                                <div key={item.id} className="col-lg-6 col-md-6">
-                                    <BlogCardStyleOne datas={item} />
-                                </div>
-                            ))}
-                        </div>
-                    </main>
                     <aside className="col-lg-4">
                         <div className="blog-sidebar-s1">
                             <div className="search-widget widget">
@@ -185,8 +175,18 @@ function MainSection() {
                             </div>
                         </div>
                     </aside>
+                    <main className="col-lg-8">
+                        <div className="row b-post-gallery-s2" style={{ "justifyContent": "center" }}>
+                            {notFound ? <NotFound /> : <></>}
+                            {blogs && blogs.length > 0 && blogs.map((item) => (
+                                <div key={item.id} className="col-lg-6 col-md-6">
+                                    <BlogCardStyleOne datas={item} />
+                                </div>
+                            ))}
+                        </div>
+                    </main>
                 </div >
-                <div className="b-pagination">
+                <div className="b-pagination text-right">
                     <ul className="pagination">
                         {renderGoNextPage()}
                         <li><Link to="#">{currentPage}</Link></li>

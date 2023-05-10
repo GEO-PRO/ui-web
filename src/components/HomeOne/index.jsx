@@ -27,13 +27,13 @@ function index() {
       <Header />
       <Drawer />
       <Hero />
-      <FeatureSection />
-      <AboutSection />
-      <AboutSectionTwo />
+      {/* <FeatureSection /> */}
+      {/* <AboutSection /> */}
+      {/* <AboutSectionTwo /> */}
       <FeatureSectionSlider />
       <FunFact />
-      <ProjectSlider />
-      <TestimonialSection />
+      {/* <ProjectSlider /> */}
+      {/* <TestimonialSection /> */}
       <BlogSection />
       <Footer />
     </>

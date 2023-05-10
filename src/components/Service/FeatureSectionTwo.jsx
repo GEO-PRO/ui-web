@@ -22,23 +22,23 @@ function FeatureSectionTwo() {
     const renderTitleDoc = () => {
         return titleDoc ? titleDoc.map((title, index) => {
             return <div className="col-xl-4 col-md-6 text-center">
-                <div
-                    className="feature-s2 wow animate__animated animate__fadeInLeft"
-                    data-wow-duration="1.5s"
-                    data-wow-delay=".5s"
-                >
-                    <div className="icon">
-                        {iconTitle[index]}
-                    </div>
-                    <Link to={`title/${title.id}`} className=''>
+                <Link to={`title/${title.id}`} className=''>
+                    <div
+                        className="feature-s2 wow animate__animated animate__fadeInLeft"
+                        data-wow-duration="1.5s"
+                        data-wow-delay=".5s"
+                    >
+                        <div className="icon">
+                            {iconTitle[index]}
+                        </div>
                         <div className="content">
                             <h4 className='c-text-overflow-1'>{title.name}</h4>
                             <p className='c-text-overflow-1'>
-                                Tài liệu về {title.name}
+                                {title.descript}
                             </p>
                         </div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
             </div>
         }) : <NotFound />
     }
@@ -60,23 +60,23 @@ function FeatureSectionTwo() {
                 <div className="row">
                     {renderTitleDoc()}
                     <div className="col-xl-4 col-md-6 text-center">
-                        <div
-                            className="feature-s2 wow animate__animated animate__fadeInLeft"
-                            data-wow-duration="1.5s"
-                            data-wow-delay=".5s"
-                        >
-                            <div className="icon">
-                                {iconTitle[7]}
-                            </div>
-                            <Link to={`exams`} className=''>
+                        <Link to={`exams`} className=''>
+                            <div
+                                className="feature-s2 wow animate__animated animate__fadeInLeft"
+                                data-wow-duration="1.5s"
+                                data-wow-delay=".5s"
+                            >
+                                <div className="icon">
+                                    {iconTitle[7]}
+                                </div>
                                 <div className="content">
                                     <h4 className='c-text-overflow-1'>6. Đề</h4>
                                     <p className='c-text-overflow-1'>
                                         Tập hợp các bộ đề
                                     </p>
                                 </div>
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>

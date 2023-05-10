@@ -2,9 +2,9 @@ import React from 'react';
 import SliderCom from "../helpers/SliderCom";
 
 function FeatureSectionSlider() {
-    const settings={
+    const settings = {
         dots: true,
-        arrows:false,
+        arrows: true,
         infinite: true,
         autoplay: true,
         prevArrow: '',
@@ -44,100 +44,27 @@ function FeatureSectionSlider() {
                         <div className="col-xl-4">
                             <div className="feature-s5">
                                 <div className="thumb">
-                                    <img src={require(`../../assets/images/thumbs/feature5-1.png`)} alt=""/>
-                                </div>
-                                <div className="content">
-                                    <div className="icon">
-                                        <img
-                                            src={require(`../../assets/images/feature-icons/feature5-1.png`)}
-                                            alt=""
-                                        />
-                                    </div>
-                                    <h3><a href="/service-detail">Network Protection</a></h3>
-                                    <p>
-                                        There are many variatons of passag es of Lorem Ipsum
-                                        available, but the majority have suffered
-                                    </p>
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/0xfPp6U2tUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                                </div>
+                                <div className="content c-text-overflow-2">
+                                    <h3><a href="https://www.youtube.com/embed/0xfPp6U2tUQ" target='_blank'>Giải chi tiết Đề thi HSG tỉnh Quảng Nam môn Địa lí 2022 - 2023, ôn thi Học sinh giỏi Địa lí</a></h3>
                                 </div>
                             </div>
                         </div>
                         <div className="col-xl-4">
                             <div className="feature-s5">
                                 <div className="thumb">
-                                    <img src={require(`../../assets/images/thumbs/feature5-2.webp`)} alt=""/>
-                                </div>
-                                <div className="content">
-                                    <div className="icon">
-                                        <img
-                                            src={require(`../../assets/images/feature-icons/feature5-2.png`)}
-                                            alt=""
-                                        />
-                                    </div>
-                                    <h3><a href="/service-detail">Product Development</a></h3>
-                                    <p>
-                                        There are many variatons of passag es of Lorem Ipsum
-                                        available, but the majority have suffered
-                                    </p>
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/0xfPp6U2tUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                                </div>
+                                <div className="content c-text-overflow-2">
+                                    <h3><a href="https://www.youtube.com/embed/0xfPp6U2tUQ" target='_blank'>Giải chi tiết Đề thi HSG tỉnh Quảng Nam môn Địa lí 2022 - 2023, ôn thi Học sinh giỏi Địa lí</a></h3>
                                 </div>
                             </div>
                         </div>
                         <div className="col-xl-4">
                             <div className="feature-s5">
                                 <div className="thumb">
-                                    <img src={require(`../../assets/images/thumbs/feature5-3.png`)} alt=""/>
-                                </div>
-                                <div className="content">
-                                    <div className="icon">
-                                        <img
-                                            src={require(`../../assets/images/feature-icons/feature5-3.png`)}
-                                            alt=""
-                                        />
-                                    </div>
-                                    <h3><a href="/service-detail">Digital Marketing</a></h3>
-                                    <p>
-                                        There are many variatons of passag es of Lorem Ipsum
-                                        available, but the majority have suffered
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-xl-4">
-                            <div className="feature-s5">
-                                <div className="thumb">
-                                    <img src={require(`../../assets/images/thumbs/feature5-3.png`)} alt=""/>
-                                </div>
-                                <div className="content">
-                                    <div className="icon">
-                                        <img
-                                            src={require(`../../assets/images/feature-icons/feature5-3.png`)}
-                                            alt=""
-                                        />
-                                    </div>
-                                    <h3><a href="/service-detail">User Research</a></h3>
-                                    <p>
-                                        There are many variatons of passag es of Lorem Ipsum
-                                        available, but the majority have suffered
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-xl-4">
-                            <div className="feature-s5">
-                                <div className="thumb">
-                                    <img src={require(`../../assets/images/thumbs/feature5-3.png`)} alt=""/>
-                                </div>
-                                <div className="content">
-                                    <div className="icon">
-                                        <img
-                                            src={require(`../../assets/images/feature-icons/feature5-3.png`)}
-                                            alt=""
-                                        />
-                                    </div>
-                                    <h3><a href="/service-detail">SEM Research</a></h3>
-                                    <p>
-                                        There are many variatons of passag es of Lorem Ipsum
-                                        available, but the majority have suffered
-                                    </p>
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/0xfPp6U2tUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                                </div>
+                                <div className="content c-text-overflow-2">
+                                    <h3><a href="https://www.youtube.com/embed/0xfPp6U2tUQ" target='_blank'>Giải chi tiết Đề thi HSG tỉnh Quảng Nam môn Địa lí 2022 - 2023, ôn thi Học sinh giỏi Địa lí</a></h3>
                                 </div>
                             </div>
                         </div>

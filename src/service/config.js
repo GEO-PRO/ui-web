@@ -2,7 +2,8 @@ const BASE_URL = "http://localhost:3000"
 const API_URL = "http://localhost:3001"
 
 const scrollTop = () => {
-    window.scrollTo({ behavior: "smooth", top: "0px" });
+    window.scrollTo(0, 500);
+    // window.scrollTo({ behavior: "smooth", top: "0px" });
 }
 
 const getNotFound = (dataLength) => {

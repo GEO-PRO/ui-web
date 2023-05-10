@@ -1,6 +1,16 @@
 import React from 'react';
+import Lottie from 'react-lottie';
+import university from "./university.json"
 
 function Hero() {
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: university,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
     return (
         <section className="hero-s3">
             <div className="container">
@@ -12,34 +22,16 @@ function Hero() {
                             There are many variations of passage of Lorem Ipso available our
                             but the majority have suffered alteration
                         </p>
-                        <div className="btn-group">
-                            <a href="/service-detail" className="btn btn-s3">Learn More</a>
-
-                            <div className="video-popup" id="videoPopup1">
-                                <div className="video-popup-inner">
-                                    <button type="button" className="cls-btn">
-                                        <i className="fa-solid fa-xmark"></i>
-                                    </button>
-                                    <input type="text"/>
-                                </div>
-                            </div>
-                            <button type="button"
-                                className="play-btn-sm v-play-btn"
-                                data-video-id="videoPopup1"
-                            >
-                                <i className="fa-solid fa-play"></i>
-                            </button>
-                        </div>
                     </div>
                     <div className="col-xxl-5 col-xl-6 col-lg-6 hero-s3__thumb d-lg-none">
                         <div className="img">
-                            <img src={require(`../../assets/images/hero-img/3.webp`)} alt=""/>
+                            <Lottie options={defaultOptions} />
                         </div>
                     </div>
                 </div>
             </div>
             <div className="shape">
-                <img src={require(`../../assets/images/backgrounds/hero-3-shape.png`).default} alt=""/>
+                <img src={require(`../../assets/images/backgrounds/hero-3-shape.png`).default} alt="" />
             </div>
         </section>
     );

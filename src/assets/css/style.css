@@ -3056,7 +3056,7 @@ img {
   display: flex;
   align-items: center;
   margin-top: 20px;
-  /* padding-top: 44px; */
+  padding-top: 20px;
 }
 
 .d-page-banner .content h1 {
@@ -4263,7 +4263,8 @@ footer .footer-cr .footer-cr-container ul.cr-menu li:last-child {
 
 .footer-s1,
 .footer-s2 {
-  padding-top: 120px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background: url(../images/backgrounds/footer-bg.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -8618,6 +8619,14 @@ body#blog .b-pagination {
 
 .c-text-overflow-1 {
   -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.c-text-overflow-2 {
+  -webkit-line-clamp: 2;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;

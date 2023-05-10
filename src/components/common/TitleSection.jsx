@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 function TitleSection({title,paths=[]}) {
     return (
@@ -7,7 +7,7 @@ function TitleSection({title,paths=[]}) {
             <div className="container">
                 <div className="row">
                     <div className="content">
-                        <h1 style={{textTransform:'capitalize'}}>{title}</h1>
+                        <h1 style={{textTransform:'capitalize'}}><NavLink to='/library'>{title}</NavLink></h1>
                         <ul className="breadcrumb">
                             {
                                 paths && paths.length>0 && paths.map((item)=>(

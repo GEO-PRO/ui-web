@@ -236,40 +236,6 @@ function MainSection() {
                     </main>
                     <aside className="col-lg-4">
                         <div className="blog-sidebar-s1">
-                            <div className="featured-author-widget widget">
-                                <div className="thumb">
-                                    <img src={require(`../../assets/images/thumbs/blog-author.png`)} alt="" />
-                                </div>
-                                <div className="content">
-                                    <h3 className="name">Amada Smith</h3>
-                                    <p>
-                                        There are many variations of pass ages of Lorem Ipsum
-                                        available as but the majority
-                                    </p>
-                                    <ul className="social-icons-s1">
-                                        <li>
-                                            <Link to="https://www.facebook.com/QuomodoSoft"
-                                            ><i className="fa-brands fa-facebook-f"></i
-                                            ></Link>
-                                        </li>
-                                        <li>
-                                            <Link to="https://www.facebook.com/QuomodoSoft"
-                                            ><i className="fa-brands fa-twitter"></i
-                                            ></Link>
-                                        </li>
-                                        <li>
-                                            <Link to="https://www.facebook.com/QuomodoSoft"
-                                            ><i className="fa-brands fa-linkedin-in"></i
-                                            ></Link>
-                                        </li>
-                                        <li>
-                                            <Link to="https://www.facebook.com/QuomodoSoft"
-                                            ><i className="fa-brands fa-youtube"></i
-                                            ></Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                             <div className="latest-posts-widget widget">
                                 <h3 className="w-title">Latest Post</h3>
                                 <div className="recent-posts">

@@ -164,7 +164,7 @@ function MainSection() {
                         </div>
                     </aside>
                     <main className="col-lg-8">
-                        <div className="row b-post-gallery-s2" style={{ "justify-content": "center" }}>
+                        <div className="row b-post-gallery-s2" style={{ "justifyContent": "center" }}>
                             {notFound ? <NotFound /> : <></>}
                             {blogs && blogs.length > 0 && blogs.map((item) => (
                                 <div key={item.id} className="col-lg-6 col-md-6">
