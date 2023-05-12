@@ -32,6 +32,7 @@ function FeatureSectionSlider() {
             }
         ]
     }
+    
     return (
         <section className="features-slider-s3 s-padding">
             <div className="container">
