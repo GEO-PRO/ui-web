@@ -1,5 +1,6 @@
 const BASE_URL = "http://localhost:3000"
-const API_URL = "http://localhost:3001"
+// const API_URL = "http://localhost:3001"
+const API_URL = "http://210.245.96.134:3001"
 
 const scrollTop = () => {
     window.scrollTo(0, 500);
