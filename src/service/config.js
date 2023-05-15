@@ -3,8 +3,7 @@ const BASE_URL = "http://localhost:3000"
 const API_URL = "http://210.245.96.134:3001"
 
 const scrollTop = () => {
-    window.scrollTo(0, 500);
-    // window.scrollTo({ behavior: "smooth", top: "0px" });
+    window.scrollTo({ behavior: "smooth", top: "0px" });
 }
 
 const getNotFound = (dataLength) => {

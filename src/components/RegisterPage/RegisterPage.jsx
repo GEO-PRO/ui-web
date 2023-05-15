@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../assets/css/login.css'
 import LogoPage from '../common/LogoPage'
 import { NavLink } from 'react-router-dom'
 
-export default function LoginPage() {
-
+export default function RegisterPage() {
     return (
         <>
             <div className='login-page'>
@@ -15,18 +14,23 @@ export default function LoginPage() {
                                 <LogoPage />
                             </h1>
                             <div className="inputbox">
-                                <ion-icon name="mail-outline" />
+                                <ion-icon name="text-outline" />
                                 <input type="text" required />
                                 <label htmlFor>Tên người dùng</label>
+                            </div>
+                            <div className="inputbox">
+                                <ion-icon name="mail-outline" />
+                                <input type="email" required />
+                                <label htmlFor>Email</label>
                             </div>
                             <div className="inputbox">
                                 <ion-icon name="lock-closed-outline" />
                                 <input type="password" required />
                                 <label htmlFor>Mật khẩu</label>
                             </div>
-                            <button className='button-login'>Đăng nhập</button>
+                            <button className='button-login'>Đăng ký</button>
                             <div className="register">
-                                <p> <NavLink to="/register">Đăng ký</NavLink></p>
+                                <p> <NavLink to="/login" >Đăng nhập</NavLink></p>
                             </div>
                         </form>
                     </section>

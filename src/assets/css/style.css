@@ -8733,3 +8733,16 @@ body#blog .b-pagination {
 .ldio-h4hiagimj58 div {
   box-sizing: content-box;
 }
+
+.c-login-mobile-btn {
+  width: 50%;
+  margin-top: 1.25rem;
+  background-color: rgb(59 130 246);
+  color: white;
+  font-weight: 700;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 9999px;
+}

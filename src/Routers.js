@@ -16,6 +16,7 @@ import Contact from "./components/Contact";
 import Library from "./components/Library"; // => Library title
 import Exams from "./components/Exams"; // => Library title
 import LoginPage from "./components/LoginPage/LoginPage";
+import RegisterPage from "./components/RegisterPage/RegisterPage";
 
 function Routers() {
   return (
@@ -37,6 +38,7 @@ function Routers() {
       <Route exact path="/library/title/:id" element={<Library />} />
       <Route exact path="library/exams" element={<Exams />} />
       <Route exact path="/login" element={<LoginPage />} />
+      <Route exact path="/register" element={<RegisterPage />} />
     </Routes>
   );
 }

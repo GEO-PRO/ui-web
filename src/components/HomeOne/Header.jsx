@@ -1,5 +1,8 @@
 import React from 'react';
 import NavItems from "../common/NavItems";
+import { NavLink } from 'react-router-dom';
+import LogoPage from '../common/LogoPage';
+import LoginBtn from '../common/LoginBtn';
 
 function Header() {
     return (
@@ -10,16 +13,14 @@ function Header() {
                         <div className="header-s3__bottom">
                             <div className="p-left">
                                 <div className="logo">
-                                    <a href="/">
-                                        <img src={require(`../../assets/images/logos/logo-blue.svg`).default} alt="" />
-                                    </a>
+                                    <LogoPage />
                                 </div>
                             </div>
                             <div className="p-center">
                                 <NavItems />
                             </div>
                             <div className="p-right">
-                                <a href="/service" className="btn btn-s3">Đăng nhập</a>
+                                <LoginBtn />
                             </div>
                         </div>
                     </div>
